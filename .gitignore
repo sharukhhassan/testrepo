@@ -1,0 +1,11 @@
+# All targets, at base as well as per project level
+**/target
+
+# .idea files not checked in
+.idea/
+
+# Created in OSX
+.DS_Store
+
+#.iml files created in IntelliJ
+*.iml
