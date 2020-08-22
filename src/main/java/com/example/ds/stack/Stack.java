@@ -1,4 +1,4 @@
-package com.example.ds;
+package com.example.ds.stack;
 
 public interface Stack<T> {
     void push(T item);
