@@ -46,6 +46,7 @@ public class BasicHashTable<X, Y> {
             while (data[hash] != null) {
                 HashEntry he = data[hash];
                 data[hash] = null;
+//                System.out.println("Rehashing " + he.getKey() + " - " + he.getValue());
                 put((X) he.getKey(), (Y) he.getValue());
                 // we re-positioned the hash item nd didn't really add a new one so back off the size
                 size--;
@@ -67,7 +68,7 @@ public class BasicHashTable<X, Y> {
     public boolean hasValue(Y value) {
 
         for (HashEntry datum : data) {
-            if (datum.getValue() != null && datum.getValue().equals(value)) {
+            if (datum != null && datum.getValue().equals(value)) {
 
                 return true;
             }
