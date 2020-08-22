@@ -1,11 +1,11 @@
 package com.example.ds;
 
-public class BasicStack<X> {
-    private X[] data;
+public class BasicStack<X> implements Stack<X> {
+    private final X[] data;
     private int stackPointer;
 
     public BasicStack() {
-        data = (X[]) new Object[1000];
+        data = (X[]) new Object[10000];
         stackPointer = 0;
     }
 
@@ -22,8 +22,8 @@ public class BasicStack<X> {
 
     public boolean contains(X item) {
         boolean found = false;
-        for(int i=0; i<stackPointer; i++) {
-            if(data[i].equals(item)) {
+        for (int i = 0; i < stackPointer; i++) {
+            if (data[i].equals(item)) {
                 found = true;
                 break;
             }
@@ -32,9 +32,9 @@ public class BasicStack<X> {
     }
 
     public X access(X item) {
-        while(stackPointer>0) {
-            X tempItem=pop();
-            if(item.equals(tempItem)) return tempItem;
+        while (stackPointer > 0) {
+            X tempItem = pop();
+            if (item.equals(tempItem)) return tempItem;
         }
 
         throw new IllegalArgumentException("Could not find the item on the stack: " + item);

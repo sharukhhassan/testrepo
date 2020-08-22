@@ -1,9 +1,12 @@
 package com.example.apps;
 
-import com.example.ds.BasicStack;
+//import com.example.ds.BasicStack;
+
+import com.example.ds.ListStack;
+import com.example.ds.Stack;
 
 public class CardStackApp {
-    BasicStack<String> stack = new BasicStack<String>();
+    Stack<String> stack = new ListStack<String>(52);
 
     public static void main(String[] args) {
         CardStackApp app = new CardStackApp();
@@ -93,7 +96,7 @@ public class CardStackApp {
 
     public void unstackCards() {
         //now pull the cards off the stack and print them
-        while(stack.size() > 0) {
+        while (stack.size() > 0) {
             System.out.println(stack.pop());
         }
     }
