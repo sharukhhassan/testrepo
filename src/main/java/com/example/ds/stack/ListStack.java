@@ -1,4 +1,4 @@
-package com.example.ds;
+package com.example.ds.stack;
 
 import java.util.ArrayList;
 

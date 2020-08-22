@@ -1,9 +1,9 @@
 package com.example.apps;
 
-//import com.example.ds.BasicStack;
+//import com.example.ds.stack.BasicStack;
 
-import com.example.ds.ListStack;
-import com.example.ds.Stack;
+import com.example.ds.stack.ListStack;
+import com.example.ds.stack.Stack;
 
 public class CardStackApp {
     Stack<String> stack = new ListStack<String>(52);
