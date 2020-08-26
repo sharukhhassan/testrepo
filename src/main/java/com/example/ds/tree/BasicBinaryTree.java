@@ -1,5 +1,7 @@
 package com.example.ds.tree;
 
+import com.example.ds.queue.BasicQueue;
+
 public class BasicBinaryTree<X extends Comparable<X>> {
     private Node root;
     private int size;
@@ -138,6 +140,23 @@ public class BasicBinaryTree<X extends Comparable<X>> {
             // do nothing
             System.out.println("Item already added.");
         }
+    }
+
+    public void breadthFirstSearch() {
+        BasicQueue<Node> q = new BasicQueue<Node>();
+        if(this.root== null) return;
+
+        q.enQueue(root);
+        bfsTraverse(q);
+    }
+
+    private void bfsTraverse(BasicQueue<Node> q) {
+        if(q.size()==0) return;
+        Node visitedNode = q.deQueue();
+        System.out.println(visitedNode.getItem().toString());
+        if(visitedNode.getLeft()!=null) q.enQueue(visitedNode.getLeft());
+        if(visitedNode.getRight()!=null) q.enQueue(visitedNode.getRight());
+        bfsTraverse(q);
     }
 
     private class Node {
