@@ -44,7 +44,7 @@ public class MissingNumber {
             int missingNumber = findMissing(arr, i, j);
             System.out.println("Missing number: " + missingNumber);
         } catch (IllegalStateException ex) {
-            System.out.println("ERROR: "+ ex.getMessage());
+            System.out.println("ERROR: " + ex.getMessage());
         }
     }
 
