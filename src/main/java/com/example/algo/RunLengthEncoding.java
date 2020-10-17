@@ -12,16 +12,15 @@ public class RunLengthEncoding {
 
     public static String encode(String str) {
         int len = str.length();
-        if(len == 0) return "";
+        if (len == 0) return "";
         StringBuilder out = new StringBuilder();
         char tempChar = str.charAt(0);
         int tempCount = 1;
-        for(int i=1; i < len ; i++) {
-            if(str.charAt(i) == tempChar) {
+        for (int i = 1; i < len; i++) {
+            if (str.charAt(i) == tempChar) {
                 tempCount++;
                 tempChar = str.charAt(i);
-            }
-            else {
+            } else {
                 out.append(tempChar);
                 out.append(tempCount);
                 tempChar = str.charAt(i);
