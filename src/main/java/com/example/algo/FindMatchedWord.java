@@ -47,7 +47,7 @@ public class FindMatchedWord {
         String[] dict = {"abab", "aba", "xyz", "xyx"};
         String pattern = "aba";
         String patternHash = encodeString(pattern);
-//        System.out.println("Patter Hash: " + patternHash);
+        System.out.println("Patter Hash: " + patternHash);
 
         for (String word : dict) {
             if (word.length() == pattern.length()) {
